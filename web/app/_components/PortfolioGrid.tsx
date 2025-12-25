@@ -19,11 +19,11 @@ export function PortfolioGrid() {
                 <h2 className="text-3xl md:text-4xl font-black uppercase text-etchy-black mb-2">Dự án</h2>
                 <div className="h-1 w-24 bg-etchy-yellow"></div>
             </div>
-            <div className="flex gap-8 text-sm font-bold text-gray-400">
-                <button className="text-black border-b-2 border-etchy-yellow pb-1">TẤT CẢ</button>
-                <button className="hover:text-black transition-colors">THƯƠNG HIỆU</button>
-                <button className="hover:text-black transition-colors">BAO BÌ</button>
-                <button className="hover:text-black transition-colors">IN ẤN</button>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-bold text-gray-400">
+                <button className="text-black border-b-2 border-etchy-yellow pb-2 transition-all px-1">TẤT CẢ</button>
+                <button className="hover:text-black transition-all pb-2 px-1 border-b-2 border-transparent hover:border-gray-200">THƯƠNG HIỆU</button>
+                <button className="hover:text-black transition-all pb-2 px-1 border-b-2 border-transparent hover:border-gray-200">BAO BÌ</button>
+                <button className="hover:text-black transition-all pb-2 px-1 border-b-2 border-transparent hover:border-gray-200">IN ẤN</button>
             </div>
         </div>
 

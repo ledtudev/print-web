@@ -61,71 +61,95 @@ export function SiteHeader() {
                 <span className="sr-only">Mở menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              {/* Mobile Sidebar Header */}
-              <div className="mb-8">
-                <Link href="#" className="flex items-center gap-2">
-                  <span className="text-2xl font-black tracking-tighter text-etchy-black">
-                    In Thủ Đô
-                  </span>
-                </Link>
-              </div>
-
-              {/* Mobile Navigation */}
-              <nav className="flex flex-col gap-1">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="text-base font-bold hover:text-etchy-yellow transition-colors py-3 px-2 rounded hover:bg-gray-50"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </nav>
-
-              {/* Mobile Actions */}
-              <div className="mt-8 pt-8 border-t flex flex-col gap-3">
-                <Button variant="outline" className="w-full justify-start gap-2 font-bold">
-                  <Search className="h-4 w-4" />
-                  Tìm kiếm
-                </Button>
-                <Button className="w-full bg-etchy-yellow text-black hover:bg-black hover:text-white font-bold">
-                  NHẬN BÁO GIÁ
-                </Button>
-              </div>
-
-              {/* Mobile Contact & Social */}
-              <div className="mt-8 pt-8 border-t flex flex-col gap-6">
-                <div className="flex flex-col gap-4">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500">Thông tin liên hệ</h4>
-                  <Link href="tel:0983828830" className="flex items-center gap-3 text-sm font-medium hover:text-etchy-yellow">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100">
-                      <Phone className="h-4 w-4" />
+            <SheetContent side="right" className="w-full max-w-[320px] sm:max-w-[400px] p-0 border-l-0">
+              <div className="flex flex-col h-full bg-white">
+                {/* Mobile Sidebar Header */}
+                <div className="p-6 border-b">
+                  <Link href="#" className="flex items-center gap-2">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-etchy-yellow text-black font-black text-xl">
+                      T
                     </div>
-                    0983 82 88 30
-                  </Link>
-                  <Link href="mailto:inthudo.vn@gmail.com" className="flex items-center gap-3 text-sm font-medium hover:text-etchy-yellow">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100">
-                      <Mail className="h-4 w-4" />
-                    </div>
-                    inthudo.vn@gmail.com
+                    <span className="text-2xl font-black tracking-tighter text-etchy-black">
+                      In Thủ Đô
+                    </span>
                   </Link>
                 </div>
 
-                <div className="flex flex-col gap-4">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500">Mạng xã hội</h4>
-                  <div className="flex items-center gap-4">
-                    <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors">
-                      <Facebook className="h-5 w-5" />
-                    </Link>
-                    <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-600 hover:bg-red-100 transition-colors">
-                      <Youtube className="h-5 w-5" />
-                    </Link>
-                    <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-50 hover:bg-pink-100 transition-colors">
-                      <InstagramLogo className="h-6 w-6" />
-                    </Link>
+                <div className="flex-1 overflow-y-auto p-6 space-y-8">
+                  {/* Mobile Navigation */}
+                  <nav className="flex flex-col gap-1">
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-4 px-2">Danh mục</h4>
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        className="text-base font-bold text-etchy-black hover:text-etchy-yellow hover:translate-x-1 transition-all py-3 px-3 rounded-xl hover:bg-gray-50 flex items-center justify-between group"
+                      >
+                        {link.name}
+                        <div className="h-1.5 w-1.5 rounded-full bg-etchy-yellow opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </Link>
+                    ))}
+                  </nav>
+
+                  {/* Mobile Actions */}
+                  <div className="space-y-3">
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-4 px-2">Hành động</h4>
+                    <Button variant="ghost" className="w-full justify-start gap-4 font-bold h-12 rounded-xl border border-gray-100 bg-gray-50/50">
+                      <Search className="h-5 w-5 text-gray-400" />
+                      Tìm kiếm
+                    </Button>
+                    <Button className="w-full bg-etchy-yellow text-black hover:bg-black hover:text-white font-black h-12 shadow-lg shadow-etchy-yellow/20 rounded-xl transition-all active:scale-95">
+                      NHẬN BÁO GIÁ
+                    </Button>
                   </div>
+
+                  {/* Mobile Contact & Social */}
+                  <div className="space-y-6">
+                    <div className="flex flex-col gap-4">
+                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 px-2">Liên hệ</h4>
+                      <div className="space-y-3">
+                        <Link href="tel:0983828830" className="flex items-center gap-4 p-3 rounded-xl bg-gray-50/50 border border-transparent hover:border-etchy-yellow/30 transition-all group">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white shadow-sm text-etchy-black group-hover:bg-etchy-yellow group-hover:text-black transition-colors">
+                            <Phone className="h-5 w-5" />
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[10px] font-bold text-gray-400 uppercase">Hotline</span>
+                            <span className="text-sm font-black text-etchy-black">0983 82 88 30</span>
+                          </div>
+                        </Link>
+                        <Link href="mailto:inthudo.vn@gmail.com" className="flex items-center gap-4 p-3 rounded-xl bg-gray-50/50 border border-transparent hover:border-etchy-yellow/30 transition-all group">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white shadow-sm text-etchy-black group-hover:bg-etchy-yellow group-hover:text-black transition-colors">
+                            <Mail className="h-5 w-5" />
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[10px] font-bold text-gray-400 uppercase">Email</span>
+                            <span className="text-sm font-black text-etchy-black">inthudo.vn@gmail.com</span>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-4">
+                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 px-2">Kết nối</h4>
+                      <div className="flex items-center gap-3 px-2">
+                        <Link href="#" className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white transition-all hover:-translate-y-1">
+                          <Facebook className="h-5 w-5" />
+                        </Link>
+                        <Link href="#" className="flex h-11 w-11 items-center justify-center rounded-xl bg-red-50 text-red-600 hover:bg-red-600 hover:text-white transition-all hover:-translate-y-1">
+                          <Youtube className="h-5 w-5" />
+                        </Link>
+                        <Link href="#" className="flex h-11 w-11 items-center justify-center rounded-xl bg-pink-50 text-pink-600 hover:bg-pink-600 hover:text-white transition-all hover:-translate-y-1">
+                          <InstagramLogo className="h-5 w-5" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 border-t mt-auto bg-gray-50/30">
+                  <p className="text-[10px] text-center font-bold text-gray-400 tracking-wider">
+                    © 2025 IN THỦ ĐÔ. ALL RIGHTS RESERVED.
+                  </p>
                 </div>
               </div>
             </SheetContent>
