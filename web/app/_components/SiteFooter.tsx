@@ -7,7 +7,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1: Brand */}
           <div className="flex flex-col gap-6">
-            <h2 className="text-3xl font-black text-white">In Thủ Đô</h2>
+            <h2 className="text-3xl font-black text-white">In Ấn Thủ Đô</h2>
             <p className="text-gray-400 text-sm leading-relaxed">
               Chuyên cung cấp dịch vụ in ấn chất lượng cao, bao bì sản phẩm và các giải pháp in ấn cho doanh nghiệp tại Hà Nội.
             </p>
@@ -34,15 +34,15 @@ export function SiteFooter() {
             <h3 className="text-lg font-bold uppercase mb-6">Liên hệ</h3>
             <ul className="flex flex-col gap-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-etchy-yellow shrink-0" />
+                <MapPin className="w-5 h-5 text-etchy-yellow shrink-0 bg-none" />
                 <span>Số 123 Đường Láng, Đống Đa, Hà Nội</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-etchy-yellow shrink-0" />
+                <Phone className="w-5 h-5 text-etchy-yellow shrink-0 bg-none" />
                 <span>0983 82 88 30</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-etchy-yellow shrink-0" />
+                <Mail className="w-5 h-5 text-etchy-yellow shrink-0 bg-none" />
                 <span>inthudo.vn@gmail.com</span>
               </li>
             </ul>

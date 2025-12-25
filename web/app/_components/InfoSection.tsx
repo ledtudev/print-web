@@ -22,7 +22,7 @@ export function InfoSection() {
             <div className="h-1 w-20 bg-etchy-yellow mb-8"></div>
             
             <p className="text-gray-500 text-lg leading-relaxed mb-8">
-              In Thủ Đô là xưởng in sáng tạo chuyên biến ý tưởng của bạn thành hiện thực. Từ danh thiếp cao cấp đến in ấn biển quảng cáo quy mô lớn, chúng tôi kết hợp nghệ thủ công truyền thống với công nghệ hiện đại.
+              In Ấn Thủ Đô là xưởng in sáng tạo chuyên biến ý tưởng của bạn thành hiện thực. Từ danh thiếp cao cấp đến in ấn biển quảng cáo quy mô lớn, chúng tôi kết hợp nghệ thủ công truyền thống với công nghệ hiện đại.
             </p>
             
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">

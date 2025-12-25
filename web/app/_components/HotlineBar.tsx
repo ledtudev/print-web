@@ -9,7 +9,7 @@ export function HotlineBar() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
           {/* Left: Welcome message */}
           <div className="hidden md:block text-gray-300">
-            Chào mừng đến với <span className="text-etchy-yellow font-semibold">In Thủ Đô</span>
+            Chào mừng đến với <span className="text-etchy-yellow font-semibold">In Ấn Thủ Đô</span>
           </div>
 
           {/* Center: Contact info */}
